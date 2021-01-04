@@ -7,8 +7,6 @@ import { useRecoilState } from "recoil";
 
 import { convertHMS } from "../../utils";
 
-import config from "../../config.json";
-
 const EpisodesListItem = ({ episode, setCurrentEpisode, themeColor }) => {
 	const [playerState] = useRecoilState(playerStore);
 

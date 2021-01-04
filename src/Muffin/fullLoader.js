@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import "./fullLoader.css"
 
-import config from "../config.json"
-
 export default function FullLoader({ loading }) {
 	let [classList, setClassList] = useState("fullLoad");
 	let [isHere, setIsHere] = useState(true)

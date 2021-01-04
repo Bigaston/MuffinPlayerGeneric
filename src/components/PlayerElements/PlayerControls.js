@@ -6,8 +6,6 @@ import { useRecoilState } from "recoil";
 import "./PlayerControls.css";
 
 import classNames from "classnames";
-import config from "../../config.json"
-
 const PlayerControls = ({ episodesListLoading, showEpisodesListButtonFn, displayEpList, themeColor }) => {
 	const [playerState] = useRecoilState(playerStore);
 

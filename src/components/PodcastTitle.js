@@ -1,7 +1,5 @@
 import React from "react";
 
-import config from "../config.json"
-
 const PodcastTitle = ({ currentEpisode, currentPodcast }) => {
 	const { enclosure_url } = currentEpisode;
 
