@@ -1,5 +1,3 @@
 {
-	"cors": "https://cors.bigaston.dev/",
-	"host_assets": "",
-	"host": ""
+	"cors": "https://cors.bigaston.dev/"
 }

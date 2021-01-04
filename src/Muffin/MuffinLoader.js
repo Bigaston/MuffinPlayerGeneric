@@ -39,7 +39,7 @@ const MuffinLoader = ({ guid, PlayerComponent }) => {
 			if (res.status === 200) {
 				let episode = res.data.episodes[0];
 				setCurrentEpisode({
-					_id: episode.id,
+					_id: 0,
 					cover: { medium_url: episode.img },
 					enclosure_duration: toSeconds(episode.duration),
 					enclosure_url: episode.audio_url,
@@ -53,9 +53,9 @@ const MuffinLoader = ({ guid, PlayerComponent }) => {
 				});
 
 				let list = [];
-				res.data.episodes.forEach(ep => {
+				res.data.episodes.forEach((ep, index) => {
 					let ep_obj = {
-						_id: ep.id,
+						_id: index,
 						cover: { medium_url: ep.img },
 						enclosure_duration: toSeconds(ep.duration),
 						enclosure_url: ep.audio_url,
