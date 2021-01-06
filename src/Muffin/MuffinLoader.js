@@ -13,11 +13,14 @@ const MuffinLoader = ({ guid, PlayerComponent }) => {
 	const [loading, setLoading] = useState(true);
 	const [displayEpList, setDisplayEpList] = useState(true);
 	const [themeColor, setThemeColor] = useState("white");
+	const [displayEpImg, setDisplayEpImg] = useState(true);
 
 	useEffect(() => {
 		const urlParams = new URLSearchParams(window.location.search);
 
 		if (urlParams.get("hide_list") !== null) { setDisplayEpList(false) }
+		if (urlParams.get("hide_img") !== null) { setDisplayEpImg(false) }
+
 		if (urlParams.get("theme") !== null) {
 			if (urlParams.get("theme") === "white") {
 				setThemeColor("white")
@@ -90,6 +93,7 @@ const MuffinLoader = ({ guid, PlayerComponent }) => {
 					setCurrentEpisode={setCurrentEpisode}
 					displayEpList={displayEpList}
 					themeColor={themeColor}
+					displayEpImg={displayEpImg}
 				/>
 			}
 		</>

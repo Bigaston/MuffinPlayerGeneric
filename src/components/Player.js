@@ -24,7 +24,8 @@ const Player = ({
 	episodesList,
 	setCurrentEpisode,
 	displayEpList,
-	themeColor
+	themeColor,
+	displayEpImg
 }) => {
 	const player = useRef();
 
@@ -143,7 +144,9 @@ const Player = ({
 		<div ref={playerDiv} className={classname("player", { white: themeColor === "white" }, { black: themeColor === "black" })}>
 			<div className="playerHead">
 				<video ref={player} hidden preload="none" />
-				<EpisodeCover currentEpisode={currentEpisode} />
+				{displayEpImg ?
+					<EpisodeCover currentEpisode={currentEpisode} />
+					: null}
 				<div className="rightDivPlayer">
 					<EpisodeTitle currentEpisode={currentEpisode} />
 					<PodcastTitle
